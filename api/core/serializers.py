@@ -1,7 +1,12 @@
-from rest_framework import serializers
+from rest_framework import serializers, permissions
+from rest_framework.response import Response
+
 from .models import Post
 from taggit_serializer.serializers import TagListSerializerField, TaggitSerializer
 from django.contrib.auth.models import User
+from taggit.models import Tag
+from rest_framework.views import APIView
+from django.core.mail import send_mail
 
 
 class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
@@ -17,3 +22,22 @@ class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
         extra_kwargs = {
             'url': {'lookup_field': 'slug'}
         }
+
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = 'name',
+        lookup_fields = 'name'
+        extra_kwargs = {
+            'url': {'lookup_field': 'name'}
+        }
+
+
+class ContactSerailizer(serializers.Serializer):
+    name = serializers.CharField()
+    email = serializers.CharField()
+    subject = serializers.CharField()
+    message = serializers.CharField()
+
+
