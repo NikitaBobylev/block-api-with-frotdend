@@ -1,12 +1,11 @@
 from django.shortcuts import render
 from .models import Post
 from .serializers import *
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from rest_framework.response import Response
 from rest_framework import permissions
 from rest_framework import pagination, generics
 from taggit.models import Tag
-
 
 
 # Create your views here.
@@ -22,6 +21,8 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     permission_classes = [permissions.AllowAny]
     pagination_class = ApiPaginator
+    search_fields = ['h1', 'content', 'title']
+    filter_backends = (filters.SearchFilter,)
 
 
 class TagDetailView(generics.ListAPIView):
