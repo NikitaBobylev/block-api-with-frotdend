@@ -10,7 +10,8 @@ urlpatterns = [
     re_path(r'tags/?$', TagListView.as_view(), name='all_tags'),
     path('aside/<slug:post_slug>', LastFiveArticlesView.as_view(), name='lastfiveposts'),
     path('feedback/', FeedBackView.as_view()),
-    path('registration/', RegistrationView.as_view())
+    path('registration/', RegistrationView.as_view()),
+    path('profile/', CureentUserView.as_view()),
 ]
 
 urlpatterns += router.urls

@@ -84,3 +84,14 @@ class RegistrationView(generics.GenericAPIView):
             "user": UserSerialiaer(user, context=self.get_serializer_context()).data,
             "message": "Пользователь успешно создан",
         })
+
+
+class CureentUserView(generics.GenericAPIView):
+    permission_classes = [permissions.AllowAny]
+    serializer_class = UserSerialiaer
+
+    def get(self, request, *args, **kwargs):
+        return Response({
+            'user': self.serializer_class(
+                request.user, context=self.get_serializer_context()).data
+        })
