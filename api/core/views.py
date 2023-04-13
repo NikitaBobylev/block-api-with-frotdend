@@ -87,7 +87,7 @@ class RegistrationView(generics.GenericAPIView):
 
 
 class CureentUserView(generics.GenericAPIView):
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = UserSerialiaer
 
     def get(self, request, *args, **kwargs):
@@ -95,3 +95,12 @@ class CureentUserView(generics.GenericAPIView):
             'user': self.serializer_class(
                 request.user, context=self.get_serializer_context()).data
         })
+
+
+class PostCommentsView(generics.ListCreateAPIView):
+    serializer_class = CommentSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        post_slug = self.kwargs.get('post_slug', '').lower()
+        return PostComment.objects.filter(post__slug=post_slug)

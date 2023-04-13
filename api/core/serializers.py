@@ -1,7 +1,7 @@
 from rest_framework import serializers, permissions
 from rest_framework.response import Response
 
-from .models import Post
+from .models import Post, PostComment
 from taggit_serializer.serializers import TagListSerializerField, TaggitSerializer
 from django.contrib.auth.models import User
 from taggit.models import Tag
@@ -69,3 +69,16 @@ class UserSerialiaer(serializers.ModelSerializer):
     class Meta:
         fields = '__all__'
         model = User
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    author = serializers.SlugRelatedField(slug_field='username', queryset=User.objects.all())
+    post = serializers.SlugRelatedField(slug_field='slug', queryset=Post.objects.all())
+
+    class Meta:
+        fields = ('post', 'author', 'text')
+        model = PostComment
+        lookup_field = 'id'
+        extra_kwargs = {
+            'url': {'lookup_field': 'id'}
+        }

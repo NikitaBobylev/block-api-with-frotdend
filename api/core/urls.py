@@ -12,6 +12,8 @@ urlpatterns = [
     path('feedback/', FeedBackView.as_view()),
     path('registration/', RegistrationView.as_view()),
     path('profile/', CureentUserView.as_view()),
+    path('comments/<slug:post_slug>/', PostCommentsView.as_view()),
+    path('comments/', PostCommentsView.as_view()),
 ]
 
 urlpatterns += router.urls
