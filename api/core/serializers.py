@@ -1,3 +1,4 @@
+from dataclasses import field
 from rest_framework import serializers, permissions
 from rest_framework.response import Response
 
@@ -9,19 +10,6 @@ from rest_framework.views import APIView
 from django.core.mail import send_mail
 
 
-class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
-    tags = TagListSerializerField()
-    author = serializers.SlugRelatedField(
-        slug_field="username", queryset=User.objects.all())
-
-    class Meta:
-        model = Post
-        fields = ("id", "h1", "title", "slug", "description", "content",
-                  "image", "created_at", "author", "tags")
-        lookup_field = 'slug'
-        extra_kwargs = {
-            'url': {'lookup_field': 'slug'}
-        }
 
 
 class TagSerializer(serializers.ModelSerializer):
@@ -81,4 +69,19 @@ class CommentSerializer(serializers.ModelSerializer):
         lookup_field = 'id'
         extra_kwargs = {
             'url': {'lookup_field': 'id'}
+        } 
+
+class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
+    tags = TagListSerializerField()
+    author = serializers.SlugRelatedField(
+        slug_field="username", queryset=User.objects.all())
+    class Meta:
+        model = Post
+        fields = ("id", "h1", "title", "slug", "description", "content",
+                  "image", "created_at", "author", "tags")
+        lookup_field = 'slug'
+        extra_kwargs = {
+            'url': {'lookup_field': 'slug'}
         }
+
+
