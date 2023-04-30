@@ -100,8 +100,8 @@ class CureentUserView(generics.GenericAPIView):
 
 class PostCommentsView(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
-    permission_classes = [permissions.AllowAny]
 
     def get_queryset(self):
         post_slug = self.kwargs.get('post_slug', '').lower()
         return PostComment.objects.filter(post__slug=post_slug)
+

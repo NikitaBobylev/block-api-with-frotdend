@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'taggit',
     'taggit_serializer',
-    'corsheaders'
+    'corsheaders',
+    'rest_framework_simplejwt',
 ]
 
 # ниже настройки JWT токена
@@ -58,10 +59,11 @@ CORS_ORIGIN_WHITELIST = ["http://localhost:3000", "http://127.0.0.1:3000"]
 # настройки rest framework
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": ["rest_framework_simplejwt.authentication.JWTAuthentication"],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication"],
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
     "TEST_REQUEST_DEFAULT_FORMAT": "json",
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissions",),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly",),
 }
 
 MIDDLEWARE = [
