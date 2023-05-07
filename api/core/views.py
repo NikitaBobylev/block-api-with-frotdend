@@ -104,4 +104,3 @@ class PostCommentsView(generics.ListCreateAPIView):
     def get_queryset(self):
         post_slug = self.kwargs.get('post_slug', '').lower()
         return PostComment.objects.filter(post__slug=post_slug)
-
