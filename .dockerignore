@@ -1,4 +1,4 @@
 /docker_compose
 *.pyc
 backend/venv
-fortend
+frontend
