@@ -6,3 +6,5 @@ backend/venv
 __init__.py
 .idea/myblog_rest.iml
 .idea/workspace.xml
+.DS_Store
+.idea
