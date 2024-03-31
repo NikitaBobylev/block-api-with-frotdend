@@ -10,8 +10,6 @@ from rest_framework.views import APIView
 from django.core.mail import send_mail
 
 
-
-
 class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tag
@@ -69,12 +67,14 @@ class CommentSerializer(serializers.ModelSerializer):
         lookup_field = 'id'
         extra_kwargs = {
             'url': {'lookup_field': 'id'}
-        } 
+        }
+
 
 class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
     tags = TagListSerializerField()
     author = serializers.SlugRelatedField(
         slug_field="username", queryset=User.objects.all())
+
     class Meta:
         model = Post
         fields = ("id", "h1", "title", "slug", "description", "content",
@@ -83,5 +83,3 @@ class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
         extra_kwargs = {
             'url': {'lookup_field': 'slug'}
         }
-
-

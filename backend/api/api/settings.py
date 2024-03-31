@@ -1,11 +1,15 @@
 from datetime import timedelta
 from pathlib import Path
+import environ
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+print(BASE_DIR)
+env = environ.Env()
 
-SECRET_KEY = 'django-insecure-!b(q)1(+zo1p@lp3ey_#hlac(p5w-=!kyi6c&ilwis)2=6%z)s'
+environ.Env.read_env(BASE_DIR.parent / '.env')
+SECRET_KEY = env('DJANGO_SECRET_KEY')
+DEBUG = True
 
-DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -19,7 +23,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
     'rest_framework',
     'ckeditor',
     'ckeditor_uploader',
@@ -28,8 +31,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework_simplejwt',
 
-
-    'core',
+    'api.core.apps.CoreConfig',
 ]
 
 LOGIN_URL = "/api/v1/signin"
@@ -60,11 +62,9 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
-
 
 CORS_ALLOW_METHODS = [
     "DELETE",
@@ -86,7 +86,7 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 
-ROOT_URLCONF = 'api.urls'
+ROOT_URLCONF = 'api.api.urls'
 
 TEMPLATES = [
     {
@@ -104,16 +104,19 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'api.wsgi.application'
+WSGI_APPLICATION = 'api.api.wsgi.application'
 APPEND_SLASH = False
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('POSTGRES_DB'),
+        'USER': env('POSTGRES_USER'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'HOST': env('POSTGRES_HOST'),
+        'PORT': env('POSTGRES_PORT'),
+    },
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -130,7 +133,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -139,14 +141,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 STATIC_URL = 'static/'
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
-
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 
@@ -172,9 +171,9 @@ CKEDITOR_CONFIGS = {
         ],
     }
 }
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'n.b.99322@gmail.com'
-EMAIL_HOST_PASSWORD = 'xahfghxmghdsgsrt'
+EMAIL_BACKEND = env('EMAIL_BACKEND')
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')

@@ -5,21 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94dfedb2-e751-4a74-a6a7-9faaebb810f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Unknown.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/api/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/Unknown.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/Unknown.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/api/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/api/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/api/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721_EZ0zKC5.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721_GRPc8Dx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/core/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/core/migrations/0002_postcomment.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/core/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/Unknown.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/images1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/images1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/images2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/images2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/images3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/images3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/images4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/images4.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/istockphoto-1093110112-612x612.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/istockphoto-1093110112-612x612.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/istockphoto-1146517111-612x612.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/istockphoto-1146517111-612x612.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/static/core/img/person-holds-a-book-over-a-stack-and-turns-the-page.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/static/core/img/person-holds-a-book-over-a-stack-and-turns-the-page.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/core/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/images3.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/istockphoto-1093110112-612x612.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/istockphoto-1146517111-612x612.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/person-holds-a-book-over-a-stack-and-turns-the-page.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/py_version.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv3.10/bin/Activate.ps1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv3.10/bin/activate" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv3.10/bin/activate.csh" beforeDir="false" />
@@ -7048,8 +7073,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
@@ -7063,11 +7098,21 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "<unknown>",
     "last_opened_file_path": "/Users/nikitabobylev/projects/myblog_rest",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../my_blog" />
+      <recent name="$PROJECT_DIR$/../my_blog/backend/docker_compose" />
+      <recent name="$PROJECT_DIR$/../my_blog/backend" />
+      <recent name="$PROJECT_DIR$/../my_blog/backend/api" />
+      <recent name="$PROJECT_DIR$/backend" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

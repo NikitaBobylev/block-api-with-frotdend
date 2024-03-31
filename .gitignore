@@ -1,3 +1,8 @@
-/venv
 .env
-
+backend/venv
+.DS_Store
+.idea*
+*__pycache__/
+__init__.py
+.idea/myblog_rest.iml
+.idea/workspace.xml

@@ -6,8 +6,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
-    path("api/", include('core.urls'), name='api'),
+    path("api/", include('api.core.urls'), name='api'),
     path("api/token/", TokenObtainPairView.as_view(), name="token"),
     path("api/refresh_token/", TokenRefreshView.as_view(), name="refresh_token"),
     path("ckeditor/", include('ckeditor_uploader.urls')),
