@@ -1,4 +1,4 @@
-# Django Products Reviews with Docker Compose, Makefile, and PostgreSQL
+# Django Personal Blog Api With Nuxt Frontend with Docker Compose, Makefile, and PostgreSQL
 
 This is a basic api for a personal blog. You can create posts, comments, tags for your posts. The application uses jwt
 authorisation.
